@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Wasted Time</title>
+        <meta name="description" content="Wasted Time">
+        <meta name="author" content="Derek Gorman">
+        <link rel="icon" href="https://img.icons8.com/officel/16/000000/calendar.png">
+        <!-------------CSS-------------->
+        <link rel="stylesheet" href="css/WastedTime.css">
+        <!-------------CSS-------------->
+
+        <!-------------FONTS-------------->
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <!-------------FONTS-------------->
+    </head>
+    <body>
+        <!-------------NAVBAR PROPERTIES-------------->
+        <div class="navBar">
+            <ul>
+                <li><a href="WastedTime.html">WT</a></li>
+            </ul>
+        </div>
+        <!-------------NAVBAR PROPERTIES-------------->
+
+    <!-----------------------CONTAINS ALL ELEMENTS TO DISPLAY FOR USER TO ENTER DATES----------------------> 
+    <div id="allElements">
+        <div id="header-container">
+            <label for="dob" id="datesLabel">Date Of Birth: </label>
+        </div>
+
+        <div id="header-container">
+            <input type="text" id="dob" name="Birthday" placeholder="MM/DD/YYYY">
+        </div>
+
+        <div id="header-container">
+            <label for="todaysDate" id="datesLabel">Today's Date: </label>
+        </div>
+
+        <div id="header-container">
+            <input type="text" id="td" name="Date" placeholder="MM/DD/YYYY">
+        </div>
+
+        <div id="header-container">
+            <button type="button" disabled id="submitBtn" onclick="calculateInterval(dob.value, td.value)">How much time I wasted in life?</a><br />
+        </div>
+
+        <div id="header-container">
+            <p id="validityText"></p>
+        </div>
+
+        <div id="header-container">
+            <p id="text">The point of this website is to be an Age Calculator. The extra calculations
+                are rough estimations on things you could have done since you've been alive. 
+                Whether it's reading "x" amount of books or walking "x" amount of miles. These are rough 
+                calculations since obviously you can't read or walk as soon as you are born.
+                Works best with Google Chrome or Brave Browsers </p>
+        </div>
+    </div>
+    <!-----------------------CONTAINS ALL ELEMENTS TO DISPLAY FOR USER TO ENTER DATES----------------------> 
+
+    <!-----------------------CONTAINS ALL ELEMENTS TO DISPLAY AFTER BUTTON PRESS---------------------->   
+    <div id="allElementsTwo">
+        <!-----------------------TOP CONTAINER CALLED "LIFE STATS"---------------------->
+        <div id="bar">
+            <div class="infoBar" id="lifeStats">
+                <h2>LIFE STATS</h2>
+            </div>
+        </div>
+        <div id="header-container">
+            <div id="yearsBox" class="infoBox">
+                <div class="imgArea" id="glassImg"></div>
+                <h1 id="yearsAlive" class="rNum"></h1>
+                <h2 id="yearsText" class="dataType">years</h2>
+            </div>
+
+            <div id="monthsBox" class="infoBox">
+                <div class="imgArea" id="calImg"></div>
+                <h1 id="monthsAlive" class="rNum"></h1>
+                <h2 id="monthsText" class="dataType">months</h2>
+            </div>
+
+            <div id="monthsBox" class="infoBox">
+                <div class="imgArea" id="sevenImg"></div>
+                <h1 id="weeksAlive" class="rNum"></h1>
+                <h2 id="weeksText" class="dataType">weeks</h2>
+            </div>
+
+            <div id="monthsBox" class="infoBox">
+                <div class="imgArea" id="sunImg"></div>
+                <h1 id="daysAlive" class="rNum"></h1>
+                <h2 id="daysText" class="dataType">days</h2>
+            </div>
+        </div>
+        <!-----------------------TOP CONTAINER CALLED "LIFE STATS"---------------------->
+
+        <!-----------------------BOTTOM CONTAINER CALLED "TIME WASTED"---------------------->
+        <div id="bar">
+            <div class="infoBar" id="lifeStats">
+                <h2>TIME WASTED</h2>
+            </div>
+        </div>
+        <div id="header-container">
+            <div id="yearsBox" class="infoBox">
+                <div class="imgArea" id="bookImg"></div>
+                <h1 id="booksRead" class="rNum"></h1>
+                <h2 id="booksText" class="dataType">books read</h2>
+            </div>
+
+            <div id="monthsBox" class="infoBox">
+                <div class="imgArea" id="runImg"></div>
+                <h1 id="milesRun" class="rNum"></h1>
+                <h2 id="milesText" class="dataType">miles run</h2>
+            </div>
+
+            <div id="monthsBox" class="infoBox">
+                <div class="imgArea" id="movieImg"></div>
+                <h1 id="moviesWatched" class="rNum"></h1>
+                <h2 id="moviesText" class="dataType">movies watched</h2>
+            </div>
+
+            <div id="monthsBox" class="infoBox">
+                <div class="imgArea" id="languageImg"></div>
+                <h1 id="languagesLearned" class="rNum"></h1>
+                <h2 id="languageText" class="dataType">languages learned</h2>
+            </div>
+        </div>
+    </div>
+    <!-----------------------BOTTOM CONTAINER CALLED "TIME WASTED"---------------------->
+<!-----------------------CONTAINS ALL ELEMENTS TO DISPLAY AFTER BUTTON PRESS----------------------> 
+
+    <!-----------------------SCRIPTS---------------------->
+        <script src="libs/moment/moment.min.js"></script>
+        <script src="js/WastedTime.js"></script>
+    <!-----------------------SCRIPTS---------------------->
+    </body>
+</html>
